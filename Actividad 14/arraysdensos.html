@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vectores Aleatorios</title>
+</head>
+<body>
+    <h1>Vectores Aleatorios</h1>
+
+    <script>
+        
+        function numeroAleatorio(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
+      
+        let vector1 = [];
+        for (let i = 0; i < 10; i++) {
+            vector1.push(numeroAleatorio(1, 500));
+        }
+
+      
+        let vector2 = []; 
+        let vector3 = [];  
+
+        for (let i = 0; i < vector1.length; i++) {
+            if (vector1[i] < 250) {
+                vector2.push(vector1[i]);
+            } else {
+                vector3.push(vector1[i]);
+            }
+        }
+
+
+        document.write("<p>Tamaño del segundo vector (menores a 250): " + vector2.length + "</p>");
+        document.write("<p>Tamaño del tercer vector (mayores o iguales a 250): " + vector3.length + "</p>");
+
+        document.write("<p>Primer vector (valores aleatorios): " + vector1 + "</p>");
+        document.write("<p>Segundo vector (menores a 250): " + vector2 + "</p>");
+        document.write("<p>Tercer vector (mayores o iguales a 250): " + vector3 + "</p>");
+    </script>
+
+</body>
+</html>

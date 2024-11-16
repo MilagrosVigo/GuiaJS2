@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificar Cookies</title>
+</head>
+<body onload="verificarCookies()">
+    <h1>Comprobando si las cookies están activadas</h1>
+
+    <script>
+        function verificarCookies() {
+            document.cookie = "testCookie=1";
+
+            if (document.cookie.indexOf("testCookie") != -1) {
+                alert("Las cookies están activadas en tu navegador.");
+            } else {
+                alert("Las cookies NO están activadas en tu navegador.");
+            }
+        }
+    </script>
+</body>
+</html>

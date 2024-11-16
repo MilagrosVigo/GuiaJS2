@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase Suma</title>
+</head>
+<body>
+    <h1>Ejemplo de Clase Suma</h1>
+
+    <script>
+        
+        class Suma {
+            constructor() {
+                this.valor1 = 0;
+                this.valor2 = 0;
+            }
+
+           
+            cargarvalor1(valor) {
+                this.valor1 = valor;
+            }
+
+           
+            cargarvalor2(valor) {
+                this.valor2 = valor;
+            }
+
+            
+            retornarResultado() {
+                return this.valor1 + this.valor2;
+            }
+        }
+
+        
+        let s = new Suma();
+
+     
+        s.cargarvalor1(10);
+        s.cargarvalor2(20);
+
+       
+        document.write('La suma de los dos valores es: ' + s.retornarResultado());
+    </script>
+
+</body>
+</html>

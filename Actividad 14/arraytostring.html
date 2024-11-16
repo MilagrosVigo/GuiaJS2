@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparar Métodos toString() y join()</title>
+</head>
+<body>
+    <h1>Comparación de Métodos</h1>
+
+    <script>
+
+        let vector = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100];
+
+        let resultadoToString = vector.toString();
+
+      
+        let resultadoJoin = vector.join();
+
+       
+        if (resultadoToString === resultadoJoin) {
+            document.write("<p>Los resultados de toString() y join() son iguales.</p>");
+        } else {
+            document.write("<p>Los resultados de toString() y join() NO son iguales.</p>");
+        }
+
+        
+        document.write("<p>Resultado de toString(): " + resultadoToString + "</p>");
+        document.write("<p>Resultado de join(): " + resultadoJoin + "</p>");
+    </script>
+
+</body>
+</html>

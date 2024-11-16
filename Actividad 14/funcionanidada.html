@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Función Anidada</title>
+</head>
+<body>
+    <h1>Ejemplo de Función Anidada</h1>
+
+    <script>
+        
+        function funcionPrincipal(parametroPrincipal) {
+          
+            let variableLocal = "Valor de la variable local";
+
+          
+            function funcionAnidada(parametroAnidado) {
+              
+                console.log("Parámetro de la función principal: " + parametroPrincipal);
+                console.log("Parámetro de la función anidada: " + parametroAnidado);
+                console.log("Valor de la variable local: " + variableLocal);
+            }
+
+            
+            funcionAnidada("Valor del parámetro anidado");
+        }
+
+        funcionPrincipal("Valor del parámetro principal");
+    </script>
+
+</body>
+</html>

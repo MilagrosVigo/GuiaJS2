@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rango de Números</title>
+</head>
+<body>
+    <h1>Mostrar Rango de Números</h1>
+    <button onclick="mostrarRango()">Mostrar Rango</button>
+    <p id="resultado"></p>
+
+    <script>
+        function mostrarRango() {
+           
+            let menor = parseInt(prompt("Introduce el número menor:"));
+            let mayor = parseInt(prompt("Introduce el número mayor:"));
+            
+            
+            if (isNaN(menor) || isNaN(mayor)) {
+                alert("Por favor, introduce números válidos.");
+                return;
+            }
+            
+           
+            if (menor > mayor) {
+                alert("El primer número debe ser menor que el segundo.");
+                return;
+            }
+
+           
+            let rango = [];
+            for (let i = menor; i <= mayor; i++) {
+                rango.push(i);
+            }
+
+         
+            document.getElementById("resultado").innerText = rango.join(' ');
+        }
+    </script>
+</body>
+</html>
